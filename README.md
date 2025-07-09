@@ -4,8 +4,8 @@
 
 **A smart web app that matches your technical skills with ideal job opportunities and career paths.** Powered by React.
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live-green?style=for-the-badge)](https://yourusername.github.io/skill-to-job-mapper)
-[![GitHub License](https://img.shields.io/github/license/yourusername/skill-to-job-mapper?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-green?style=for-the-badge)]( https://afom12.github.io/CareerCompass-Pro/)
+[![GitHub License](https://img.shields.io/github/license/afom12/skill-to-job-mapper?style=for-the-badge)](LICENSE)
 
 ## ✨ Features
 
