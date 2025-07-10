@@ -137,7 +137,6 @@ header p {
   justify-content: center;
 }
 
-/* Main Layout */
 .main-container {
   display: flex;
   gap: 2rem;
