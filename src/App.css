@@ -1191,7 +1191,6 @@ header p {
   font-size: 0.9rem;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .main-container {
     flex-direction: column;
