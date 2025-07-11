@@ -8,7 +8,6 @@ import {
 import './App.css';
 
 function App() {
-  // State management
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [skillLevels, setSkillLevels] = useState({});
   const [expandedJob, setExpandedJob] = useState(null);
