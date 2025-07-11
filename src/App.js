@@ -36,7 +36,6 @@ function App() {
     setSkillLevels({ ...skillLevels, [skill]: level });
   };
 
-  // Skills Database (Expanded)
   const skills = [
     'HTML', 'CSS', 'JavaScript', 'React', 'Angular', 'Vue', 
     'Node.js', 'Express', 'Python', 'Django', 'Flask',
