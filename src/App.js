@@ -27,7 +27,7 @@ function App() {
       const newLevels = { ...skillLevels };
       delete newLevels[skill];
       setSkillLevels(newLevels);
-    } else if (selectedSkills.length < 10) { // Limi
+    } else if (selectedSkills.length < 10) { 
       setSelectedSkills([...selectedSkills, skill]);
     }
   };
