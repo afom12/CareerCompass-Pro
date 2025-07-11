@@ -32,7 +32,7 @@ function App() {
     }
   };
 
-  // Define setSkillLevel
+  // Define 
   const setSkillLevel = (skill, level) => {
     setSkillLevels({ ...skillLevels, [skill]: level });
   };
