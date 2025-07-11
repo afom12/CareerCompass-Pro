@@ -21,7 +21,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [showAssessmentModal, setShowAssessmentModal] = useState(false);
 
-  // Define handleSkillSelect
+  // Define handle
   const handleSkillSelect = (skill) => {
     if (selectedSkills.includes(skill)) {
       setSelectedSkills(selectedSkills.filter(s => s !== skill));
