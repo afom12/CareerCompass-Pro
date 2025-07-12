@@ -293,7 +293,7 @@ function App() {
     localStorage.setItem('careerCompassData', JSON.stringify(data));
   }, [selectedSkills, skillLevels, savedJobs, savedCompanies, darkMode, location]);
 
-  // Mock user authentication
+  // Mock user
   const handleLogin = () => {
     setUser({
       id: 'user123',
