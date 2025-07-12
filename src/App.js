@@ -211,7 +211,7 @@ function App() {
     }
   };
 
-  // Company Database
+  // Company
   const companyData = {
     TechCorp: {
       rating: 4.2,
