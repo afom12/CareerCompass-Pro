@@ -267,7 +267,6 @@ function App() {
     }
   };
 
-  // Initialize
   useEffect(() => {
     const savedData = localStorage.getItem('careerCompassData');
     if (savedData) {
