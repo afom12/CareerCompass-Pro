@@ -163,7 +163,7 @@ function App() {
     }
   ];
 
-  // Career Paths Data
+  // Career Path
   const careerPaths = {
     frontend: {
       title: "Frontend Developer Path",
