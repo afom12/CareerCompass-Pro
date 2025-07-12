@@ -283,7 +283,7 @@ function App() {
     }
   }, []);
 
-  // Save to localStorage
+  // Save to
   useEffect(() => {
     const data = {
       skills: selectedSkills,
