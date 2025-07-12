@@ -44,7 +44,7 @@ function App() {
     'Redux', 'Jest', 'Cypress', 'Webpack', 'Babel'
   ];
 
-  // Enhanced Job Database
+  // Enhanced Job
   const jobData = [
     {
       id: 1,
