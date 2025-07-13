@@ -302,7 +302,7 @@ function App() {
     });
   };
 
-  // Mock skill assessment
+  // Mock skill
   const takeAssessment = (skill) => {
     const score = Math.floor(Math.random() * 100);
     const newAssessments = {
