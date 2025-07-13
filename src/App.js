@@ -310,7 +310,6 @@ function App() {
     };
     setAssessments(newAssessments);
     
-    // Update
     const level = Math.min(5, Math.max(1, Math.ceil(score / 20)));
     setSkillLevels({
       ...skillLevels,
