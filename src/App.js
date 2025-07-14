@@ -327,7 +327,7 @@ function App() {
     }
   };
 
-  // Toggle company
+  // Toggle
   const toggleSavedCompany = (companyName) => {
     if (savedCompanies.includes(companyName)) {
       setSavedCompanies(savedCompanies.filter(name => name !== companyName));
