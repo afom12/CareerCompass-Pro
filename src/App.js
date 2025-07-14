@@ -335,7 +335,7 @@ function App() {
     }
   };
 
-  // Calculate job matches with location filter
+  // Calculate job matches with
   const calculateMatches = () => {
     const perfectMatches = [];
     const strongMatches = [];
