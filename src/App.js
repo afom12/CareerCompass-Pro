@@ -319,7 +319,7 @@ function App() {
     setShowAssessmentModal(true);
   };
 
-  // Toggle job bookmark
+  // Toggle job 
   const toggleSavedJob = (jobId) => {
     if (savedJobs.includes(jobId)) {
       setSavedJobs(savedJobs.filter(id => id !== jobId));
