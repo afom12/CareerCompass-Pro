@@ -335,7 +335,7 @@ function App() {
     }
   };
 
-  // Calculate job matches with
+  // Calculate job matche
   const calculateMatches = () => {
     const perfectMatches = [];
     const strongMatches = [];
