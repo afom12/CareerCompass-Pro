@@ -341,7 +341,7 @@ function App() {
     const partialMatches = [];
 
     jobData.forEach(job => {
-      // Skip if job has specific location and doesn't match user's 
+      // Skip if job has specific location and doesn't match
       if (job.location && job.location !== 'Remote' && location !== 'Global' && job.location !== location) {
         return;
       }
