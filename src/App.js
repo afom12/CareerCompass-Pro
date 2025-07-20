@@ -411,7 +411,7 @@ function App() {
         });
       }
     });
-    return Array.from(recommendations).slice(0, 5); // Return top 5 
+    return Array.from(recommendations).slice(0, 5); // Return top
   };
 
   const getCareerPaths = () => {
