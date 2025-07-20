@@ -376,7 +376,6 @@ function App() {
 
   const { perfectMatches, strongMatches, partialMatches } = calculateMatches();
 
-  // Helper
   const calculateDemandScore = () => {
     const totalJobs = jobData.length;
     const matchingJobs = jobData.filter(job => 
