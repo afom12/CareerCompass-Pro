@@ -951,7 +951,6 @@ function App() {
   );
 }
 
-// Job Card Component
 function JobCard({
   job,
   expanded,
