@@ -458,7 +458,7 @@ function App() {
       }
     });
     
-    return companies.slice(0, 6); // Return top 6 companies
+    return companies.slice(0, 6); 
   };
 
   return (
