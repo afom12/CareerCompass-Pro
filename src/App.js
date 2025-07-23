@@ -451,7 +451,6 @@ function App() {
       }
     });
     
-    // Add saved companies
     savedCompanies.forEach(company => {
       if (!companies.includes(company)) {
         companies.push(company);
