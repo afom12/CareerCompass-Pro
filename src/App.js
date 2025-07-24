@@ -444,7 +444,6 @@ function App() {
   const getTopCompanies = () => {
     const companies = [];
     
-    // Add companies from job matches
     jobData.forEach(job => {
       if (!companies.includes(job.company)) {
         companies.push(job.company);
