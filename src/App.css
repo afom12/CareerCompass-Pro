@@ -1,4 +1,4 @@
-/* Modern Design System */
+/* Base Styles & Variables */
 :root {
   --primary: #6366f1;
   --primary-light: #818cf8;
@@ -68,7 +68,12 @@ body {
   margin: 0 auto;
   padding: 2rem 1.5rem;
   min-height: 100vh;
-  position: relative;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .app::before {
@@ -83,7 +88,6 @@ body {
   opacity: 0.95;
 }
 
-/* Header Styles */
 header {
   text-align: center;
   margin-bottom: 3rem;
@@ -141,7 +145,6 @@ header p {
   justify-content: center;
 }
 
-/* Main Layout */
 .main-container {
   display: grid;
   grid-template-columns: 380px 1fr;
@@ -155,6 +158,11 @@ header p {
   top: 2rem;
 }
 
+.content-container {
+  flex: 2;
+}
+
+/* Skill Selector */
 .skill-selector {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
@@ -562,7 +570,6 @@ header p {
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
-/* Results Container */
 .results-container {
   margin-top: 1rem;
 }
@@ -636,7 +643,6 @@ header p {
   box-shadow: var(--shadow-lg);
 }
 
-/* Job Card */
 .job-card {
   background: var(--white);
   border-radius: var(--radius-xl);
@@ -880,7 +886,6 @@ header p {
   box-shadow: var(--shadow-lg);
 }
 
-/* Job Details */
 .job-details {
   padding: 0 2rem 2rem;
   border-top: 1px solid var(--light-gray);
@@ -1030,7 +1035,6 @@ header p {
   transform: translateY(-2px);
 }
 
-/* Career Paths */
 .career-paths-container {
   background: var(--white);
   border-radius: var(--radius-xl);
@@ -1180,7 +1184,6 @@ header p {
   gap: 0.75rem;
 }
 
-/* Skill Development */
 .skill-development-container {
   background: var(--white);
   border-radius: var(--radius-xl);
@@ -1527,7 +1530,6 @@ header p {
   transform: translateX(5px);
 }
 
-/* Assessment Modal */
 .assessment-modal {
   position: fixed;
   top: 0;
@@ -1704,7 +1706,6 @@ header p {
   box-shadow: var(--shadow-lg);
 }
 
-/* Location Selector & Theme Toggle */
 .location-selector,
 .theme-toggle,
 .login-button {
@@ -1818,12 +1819,6 @@ header p {
 }
 
 /* Responsive Design */
-@media (max-width: 1280px) {
-  .main-container {
-    grid-template-columns: 350px 1fr;
-  }
-}
-
 @media (max-width: 1024px) {
   .main-container {
     grid-template-columns: 1fr;
@@ -1964,8 +1959,4 @@ html {
   50% {
     opacity: 0.5;
   }
-}
-
-.loading {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

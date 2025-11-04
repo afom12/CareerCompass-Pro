@@ -8,7 +8,6 @@ import {
 import './App.css';
 
 function App() {
-  // State management
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [skillLevels, setSkillLevels] = useState({});
   const [expandedJob, setExpandedJob] = useState(null);
@@ -22,24 +21,21 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [showAssessmentModal, setShowAssessmentModal] = useState(false);
 
-  // Define handleSkillSelect at the top level of the component
   const handleSkillSelect = (skill) => {
     if (selectedSkills.includes(skill)) {
       setSelectedSkills(selectedSkills.filter(s => s !== skill));
       const newLevels = { ...skillLevels };
       delete newLevels[skill];
       setSkillLevels(newLevels);
-    } else if (selectedSkills.length < 10) { // Limit to 10 skills
+    } else if (selectedSkills.length < 10) { 
       setSelectedSkills([...selectedSkills, skill]);
     }
   };
 
-  // Define setSkillLevel at the top level of the component
   const setSkillLevel = (skill, level) => {
     setSkillLevels({ ...skillLevels, [skill]: level });
   };
 
-  // Skills Database (Expanded)
   const skills = [
     'HTML', 'CSS', 'JavaScript', 'React', 'Angular', 'Vue', 
     'Node.js', 'Express', 'Python', 'Django', 'Flask',
@@ -48,7 +44,6 @@ function App() {
     'Redux', 'Jest', 'Cypress', 'Webpack', 'Babel'
   ];
 
-  // Enhanced Job Database
   const jobData = [
     {
       id: 1,
@@ -168,7 +163,6 @@ function App() {
     }
   ];
 
-  // Career Paths Data
   const careerPaths = {
     frontend: {
       title: "Frontend Developer Path",
@@ -217,7 +211,6 @@ function App() {
     }
   };
 
-  // Company Database
   const companyData = {
     TechCorp: {
       rating: 4.2,
@@ -274,7 +267,6 @@ function App() {
     }
   };
 
-  // Initialize from localStorage
   useEffect(() => {
     const savedData = localStorage.getItem('careerCompassData');
     if (savedData) {
@@ -290,7 +282,6 @@ function App() {
     }
   }, []);
 
-  // Save to localStorage
   useEffect(() => {
     const data = {
       skills: selectedSkills,
@@ -302,7 +293,6 @@ function App() {
     localStorage.setItem('careerCompassData', JSON.stringify(data));
   }, [selectedSkills, skillLevels, savedJobs, savedCompanies, darkMode, location]);
 
-  // Mock user authentication
   const handleLogin = () => {
     setUser({
       id: 'user123',
@@ -312,7 +302,6 @@ function App() {
     });
   };
 
-  // Mock skill assessment
   const takeAssessment = (skill) => {
     const score = Math.floor(Math.random() * 100);
     const newAssessments = {
@@ -321,7 +310,6 @@ function App() {
     };
     setAssessments(newAssessments);
     
-    // Update skill level based on assessment
     const level = Math.min(5, Math.max(1, Math.ceil(score / 20)));
     setSkillLevels({
       ...skillLevels,
@@ -331,7 +319,6 @@ function App() {
     setShowAssessmentModal(true);
   };
 
-  // Toggle job bookmark
   const toggleSavedJob = (jobId) => {
     if (savedJobs.includes(jobId)) {
       setSavedJobs(savedJobs.filter(id => id !== jobId));
@@ -340,7 +327,6 @@ function App() {
     }
   };
 
-  // Toggle company bookmark
   const toggleSavedCompany = (companyName) => {
     if (savedCompanies.includes(companyName)) {
       setSavedCompanies(savedCompanies.filter(name => name !== companyName));
@@ -349,14 +335,13 @@ function App() {
     }
   };
 
-  // Calculate job matches with location filter
   const calculateMatches = () => {
     const perfectMatches = [];
     const strongMatches = [];
     const partialMatches = [];
 
     jobData.forEach(job => {
-      // Skip if job has specific location and doesn't match user's preference
+    
       if (job.location && job.location !== 'Remote' && location !== 'Global' && job.location !== location) {
         return;
       }
@@ -391,7 +376,6 @@ function App() {
 
   const { perfectMatches, strongMatches, partialMatches } = calculateMatches();
 
-  // Helper functions for insights
   const calculateDemandScore = () => {
     const totalJobs = jobData.length;
     const matchingJobs = jobData.filter(job => 
@@ -427,7 +411,7 @@ function App() {
         });
       }
     });
-    return Array.from(recommendations).slice(0, 5); // Return top 5 recommendations
+    return Array.from(recommendations).slice(0, 5);
   };
 
   const getCareerPaths = () => {
@@ -460,21 +444,19 @@ function App() {
   const getTopCompanies = () => {
     const companies = [];
     
-    // Add companies from job matches
     jobData.forEach(job => {
       if (!companies.includes(job.company)) {
         companies.push(job.company);
       }
     });
     
-    // Add saved companies
     savedCompanies.forEach(company => {
       if (!companies.includes(company)) {
         companies.push(company);
       }
     });
     
-    return companies.slice(0, 6); // Return top 6 companies
+    return companies.slice(0, 6); 
   };
 
   return (
@@ -968,7 +950,6 @@ function App() {
   );
 }
 
-// Job Card Component
 function JobCard({
   job,
   expanded,
